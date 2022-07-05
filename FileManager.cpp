@@ -11,7 +11,8 @@ FileManager::FileManager(const char* FILE) : File(FILE) {
 
 template<typename T> void FileManager::write(T data) {
   FileStream.close();
-  FileStream.open (File, std::ios::in | std::ios::out);
+  FileStream.open (File, std::ios::app);
+
   if (!FileStream.bad()) {
     FileStream << data;
   }
