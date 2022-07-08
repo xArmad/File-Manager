@@ -1,20 +1,11 @@
+#include "headers.hpp"
 #include "FileManager.cpp"
+#include "Counter.cpp"
 
 int main() {
-  const char* FILE = "another.txt"; // File to be used
-  FileManager fm(FILE); // FileManager Object created
-  
-  fm.write("This is a test"); // Write to file
-  fm.write('\n');
-
-  std::string data;
-  std::cout << fm.read(data) << std::endl; // Read from file
-
-  fm = "new.txt"; // Change file
-  fm.write("This is a new file"); // Write to file
-  fm.write('\n');
-  
-  std::cout << fm.read(data) << std::endl; // Read from file
+  FileManager fm("timer.txt");
+  fm = "testt.txt";
+  Counter c;
   return 0;
 }
 
