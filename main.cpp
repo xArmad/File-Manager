@@ -1,11 +1,11 @@
-#include "headers.hpp"
+#include "Include/headers.hpp"
 #include "FileManager.cpp"
-#include "Counter.cpp"
+//#include "Counter.cpp"
 
 int main() {
   FileManager fm("timer.txt");
-  fm = "testt.txt";
-  Counter c;
+  std::string hr, min, sec;
+  fm << hr << min << sec;
   return 0;
 }
 
